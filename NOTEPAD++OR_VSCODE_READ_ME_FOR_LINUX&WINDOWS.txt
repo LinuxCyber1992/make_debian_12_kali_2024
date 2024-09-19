@@ -25,7 +25,7 @@
 ################################################################################################################################# 
 # Before you launch this script, please grant +x permission on your installed Debian 12 copy.                                   #
 #                                                                                                                               #
-# GO TO your download folder where you stored/donwloaded this file                                                              #
+# GO TO your download folder where you stored/downloaded this file                                                              #
 #                                                                                                                               #
 # sudo _user_ or sudo su                                                                                                        #
 # ~~~~~Enter Your Password~~~~~~~                                                                                               #
@@ -51,4 +51,24 @@ apt -y dist-upgrade
 apt -y autoremove --purge
 # If you don't have enough hard drive/sdd space for kali-everything version, then you can do download the minimalized, default
 # and top10 version, and change the "kali-linux-everything" portion of this code:
+#
+#
 apt -y install kali-linux-everything
+#
+#
+#
+#
+#
+# I recommend looking at the kali metapackages to see which one suites you. Your PC has to have enough storage
+# https://www.kali.org/docs/general-use/metapackages/
+#
+#
+#
+#
+#
+# YOUR OPTIONS:
+#kali-linux-core: Base Kali Linux System – core items that are always included
+#kali-linux-headless: Default install that doesn’t require GUI
+#kali-linux-default: “Default” desktop images include these tools
+#kali-linux-arm: All tools suitable for ARM devices
+#
