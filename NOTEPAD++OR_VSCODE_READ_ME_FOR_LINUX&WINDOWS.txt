@@ -37,23 +37,29 @@
 # Done                                                                                                                          #
 # Thank you!                                                                                                                    #
 #################################################################################################################################
-
+#
 # Manual Terminal based installation (thru shell/cli) commands:
-apt update
-apt -y install wget gnupg dirmngr
+apt update -y
+apt install wget gnupg dirmngr -y
 wget -q -O - https://archive.kali.org/archive-key.asc | gpg --import
 gpg --keyserver hkp://keys.gnupg.net --recv-key 44C6513A8E4FB3D30875F758ED444FF07D8D0BF6
 echo "deb http://http.kali.org/kali kali-rolling main non-free contrib" >> /etc/apt/sources.list
 gpg -a --export ED444FF07D8D0BF6 | sudo apt-key add -
-apt update
-apt -y upgrade
-apt -y dist-upgrade
-apt -y autoremove --purge
+apt update -y
+apt full-upgrade -y
+apt dist-upgrade -y
+apt autoremove --purge
 # If you don't have enough hard drive/sdd space for kali-everything version, then you can do download the minimalized, default
-# and top10 version, and change the "kali-linux-everything" portion of this code:
+# and top10 version, and change the "kali-linux-everything" portion of this code: PLEASE INSTALL KALI-LINUX-CORE FIRST
 #
 #
-apt -y install kali-linux-everything
+apt install kali-linux-core -y
+#
+# After installing the kali-linux-core, install your desire kali.
+# here, it is up to you to decide 
+#apt install kali-linux-(Whatever you want on the repo)
+#
+#For example:  apt install kali-linux-default -y
 #
 #
 #
